@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Big, friendly heading */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+/* Style the input box */
+input#name {
+  padding: 12px 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+input#name:focus {
+  box-shadow: 0 0 8px 2px #ff7e5f;
+}
+
+/* Style the button */
+button {
+  background: #ff7e5f;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255,126,95,0.5);
+}
+
+button:hover {
+  background: #ff5939;
+  box-shadow: 0 6px 15px rgba(255,89,57,0.7);
+}
+
+/* Style the output number */
+h2#num {
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  min-height: 40px;
+  transition: opacity 0.5s ease;
+}
+    </style>
+</head>
+<body>
+    <h1>Lucky Number Calculator</h1>
+    <input type="text" id="name" >
+    <button onclick="cal()">Generate</button>
+    <h2 id="num"></h2>
+    
+    <script src="task1.js"></script>
+</body>
+</html>
