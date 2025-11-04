@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3 - Session 2 | Task 1: Destructuring, Notation & Iteration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f7fc;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #0056b3; }
+  </style>
+</head>
+<body>
+  <h2>Week 3 - Session 2: Task 1 (Destructuring, Notation & Iteration)</h2>
+  <p>Click below and open the console to view results.</p>
+  <button onclick="runTask1()">Run Task 1</button>
+
+  <script>
+    function runTask1() {
+      console.clear();
+      console.log("=== Task 1: Destructuring, Notation & Iteration ===");
+
+      // Array destructuring
+      const colors = ["Red", "Green", "Blue"];
+      const [first, second, third] = colors;
+      console.log("\nArray Destructuring:", first, second, third);
+
+      // Object destructuring
+      const student = { name: "Deepan", age: 21, course: "BCA" };
+      const { name, age, course } = student;
+      console.log("\nObject Destructuring:", name, age, course);
+
+      // Nested object destructuring
+      const user = {
+        id: 101,
+        info: {
+          email: "deepan@example.com",
+          address: { city: "Chennai", country: "India" }
+        }
+      };
+      const { info: { address: { city, country } } } = user;
+      console.log("\nNested Destructuring:", city, country);
+
+      // Dot and bracket notation
+      console.log("\nDot notation:", student.name);
+      console.log("Bracket notation:", student["course"]);
+
+      // Iterate through object
+      console.log("\nIterating with for...in:");
+      for (let key in student) {
+        console.log(`${key}: ${student[key]}`);
+      }
+
+      console.log("\nUsing Object.keys():");
+      Object.keys(student).forEach(key => console.log(key));
+
+      console.log("\nUsing Object.entries():");
+      Object.entries(student).forEach(([key, value]) => console.log(`${key}: ${value}`));
+    }
+  </script>
+</body>
+</html>

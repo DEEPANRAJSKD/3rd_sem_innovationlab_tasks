@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3 - Session 1 | Task 2: Objects and Methods</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef6f9;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #1e7e34; }
+  </style>
+</head>
+<body>
+  <h2>Week 3 - Session 1: Task 2 (Objects and Methods)</h2>
+  <p>Click the button and check the console for outputs.</p>
+  <button onclick="runTask2()">Run Task 2</button>
+
+  <script>
+    function runTask2() {
+      console.clear();
+      console.log("=== Task 2: Working with Objects and Methods ===");
+
+      // Object representing a student
+      let student = {
+        name: "Aswin",
+        age: 20,
+        course: "BSc Computer Science",
+        displayInfo: function() {
+          console.log(`Student: ${this.name}, Age: ${this.age}, Course: ${this.course}`);
+        }
+      };
+
+      // Accessing properties
+      console.log("\nOriginal object:", student);
+      student.displayInfo();
+
+      // Modifying properties
+      student.age = 21;
+      console.log("\nAfter modifying age:", student);
+
+      // Adding a new property dynamically
+      student.grade = "A";
+      console.log("After adding new property (grade):", student);
+
+      // Adding another method
+      student.greet = function() {
+        console.log(`Hello, my name is ${this.name}!`);
+      };
+
+      student.greet();
+    }
+  </script>
+</body>
+</html>

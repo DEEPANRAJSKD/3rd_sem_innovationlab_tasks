@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2 - Session 1 | Task 3: Callback Functions & Scopes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #e64a19; }
+  </style>
+</head>
+<body>
+  <h2>Week 2 - Session 1: Task 3 (Callback Functions & Scopes)</h2>
+  <p>Click the button and check the console for outputs.</p>
+  <button onclick="runTask3()">Run Task 3</button>
+
+  <script>
+    function runTask3() {
+      console.clear();
+      console.log("=== Task 3: Callback Functions & Scopes ===");
+
+      // Function with callback
+      function doTask(taskName, callback) {
+        console.log("Starting:", taskName);
+        setTimeout(() => {
+          console.log(taskName, "completed!");
+          callback();
+        }, 1000);
+      }
+
+      function afterTask() {
+        console.log("All tasks done!");
+      }
+
+      doTask("Loading data", afterTask);
+
+      // Scope examples
+      console.log("\n--- Scope Demonstration ---");
+      var globalVar = "Global var";
+      let blockLet = "Block let";
+      const constVal = "Constant";
+
+      console.log("Outside block:", globalVar, "|", blockLet, "|", constVal);
+
+      if (true) {
+        var globalVar = "Updated inside block";
+        let blockLet = "New block variable";
+        const constVal = "Block const";
+        console.log("Inside block:", globalVar, "|", blockLet, "|", constVal);
+      }
+
+      console.log("Outside block after:", globalVar);
+    }
+  </script>
+</body>
+</html>

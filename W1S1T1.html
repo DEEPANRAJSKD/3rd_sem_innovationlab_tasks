@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1 - Basic JavaScript Program & Console</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f5;
+      text-align: center;
+      margin-top: 100px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>Basic JavaScript Program</h2>
+  <p>Click the button and check the console for output.</p>
+  <button onclick="runProgram()">Run Program</button>
+
+  <script>
+    function runProgram() {
+      console.clear();
+      console.log("=== Basic JavaScript Program ===");
+
+      // var example
+      var name = "Deepanraj";
+      console.log("Name:", name);
+      name = "Raj";
+      console.log("Updated Name:", name);
+
+      // let example
+      let age = 20;
+      console.log("Age:", age);
+      age = 21;
+      console.log("Updated Age:", age);
+
+      // const example
+      const country = "India";
+      console.log("Country:", country);
+
+      // Displaying all values together
+      console.log(`Hello, I'm ${name}, ${age} years old from ${country}.`);
+    }
+  </script>
+</body>
+</html>

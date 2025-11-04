@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2 - Session 2 | Task 2: Array Creation & Basic Operations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f5;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #1e7e34; }
+  </style>
+</head>
+<body>
+  <h2>Week 2 - Session 2: Task 2 (Array Creation & Basic Operations)</h2>
+  <p>Click the button and check the console for outputs.</p>
+  <button onclick="runTask2()">Run Task 2</button>
+
+  <script>
+    function runTask2() {
+      console.clear();
+      console.log("=== Task 2: Array Creation & Basic Operations ===");
+
+      // Array of numbers and strings
+      let numbers = [10, 20, 30, 40];
+      let fruits = ["Apple", "Banana", "Cherry"];
+      console.log("Numbers:", numbers);
+      console.log("Fruits:", fruits);
+
+      // Access & modify elements
+      console.log("\n--- Access & Modify ---");
+      console.log("First number:", numbers[0]);
+      numbers[1] = 25;
+      console.log("After modification:", numbers);
+
+      // Array length
+      console.log("\nArray length:", fruits.length);
+
+      // Adding and removing elements
+      console.log("\n--- Adding & Removing ---");
+      fruits.push("Mango");
+      console.log("After push:", fruits);
+      fruits.pop();
+      console.log("After pop:", fruits);
+      fruits.unshift("Orange");
+      console.log("After unshift:", fruits);
+      fruits.shift();
+      console.log("After shift:", fruits);
+    }
+  </script>
+</body>
+</html>

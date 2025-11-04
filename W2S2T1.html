@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2 - Session 2 | Task 1: Math & String Functions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #0056b3; }
+  </style>
+</head>
+<body>
+  <h2>Week 2 - Session 2: Task 1 (Math & String Built-in Functions)</h2>
+  <p>Click the button and check the console for outputs.</p>
+  <button onclick="runTask1()">Run Task 1</button>
+
+  <script>
+    function runTask1() {
+      console.clear();
+      console.log("=== Task 1: Math & String Built-in Functions ===");
+
+      // Math functions
+      console.log("\n--- Math Functions ---");
+      console.log("Random number (0–100):", Math.floor(Math.random() * 101));
+      console.log("Round(4.7):", Math.round(4.7));
+      console.log("Ceil(4.2):", Math.ceil(4.2));
+      console.log("Floor(4.9):", Math.floor(4.9));
+      console.log("Min(10, 5, 3, 9):", Math.min(10, 5, 3, 9));
+      console.log("Max(10, 5, 3, 9):", Math.max(10, 5, 3, 9));
+
+      // String functions
+      console.log("\n--- String Functions ---");
+      let text = "Hello JavaScript World!";
+      console.log("Original:", text);
+      console.log("Uppercase:", text.toUpperCase());
+      console.log("Lowercase:", text.toLowerCase());
+      console.log("Substring (0–5):", text.substring(0, 5));
+      console.log("Includes 'Java':", text.includes("Java"));
+      console.log("Replace 'World' -> 'Universe':", text.replace("World", "Universe"));
+    }
+  </script>
+</body>
+</html>

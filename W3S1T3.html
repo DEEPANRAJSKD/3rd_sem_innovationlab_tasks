@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3 - Session 1 | Task 3: Object Destructuring and Spread</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdf6ec;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #e68900; }
+  </style>
+</head>
+<body>
+  <h2>Week 3 - Session 1: Task 3 (Object Destructuring and Spread)</h2>
+  <p>Click below and open console to see results.</p>
+  <button onclick="runTask3()">Run Task 3</button>
+
+  <script>
+    function runTask3() {
+      console.clear();
+      console.log("=== Task 3: Object Destructuring and Spread ===");
+
+      // Basic destructuring
+      const student = { name: "Deepan", age: 21, course: "BCA" };
+      const { name, age, course } = student;
+      console.log("\nBasic destructuring:");
+      console.log(name, age, course);
+
+      // Destructuring with default values
+      const { grade = "A", college = "ABC College" } = student;
+      console.log("\nWith default values:");
+      console.log(grade, college);
+
+      // Nested object destructuring
+      const person = {
+        id: 1,
+        info: {
+          city: "Chennai",
+          country: "India"
+        }
+      };
+      const { info: { city, country } } = person;
+      console.log("\nNested destructuring:");
+      console.log(city, country);
+
+      // Spread operator - clone & merge
+      const obj1 = { a: 1, b: 2 };
+      const obj2 = { b: 3, c: 4 };
+      const clone = { ...obj1 };
+      const merged = { ...obj1, ...obj2 };
+      console.log("\nCloned object:", clone);
+      console.log("Merged object:", merged);
+    }
+  </script>
+</body>
+</html>

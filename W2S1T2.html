@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2 - Session 1 | Task 2: Function Expressions & Arrow Functions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f5;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #1e7e34; }
+  </style>
+</head>
+<body>
+  <h2>Week 2 - Session 1: Task 2 (Function Expressions & Arrow Functions)</h2>
+  <p>Click the button and check the console for outputs.</p>
+  <button onclick="runTask2()">Run Task 2</button>
+
+  <script>
+    function runTask2() {
+      console.clear();
+      console.log("=== Task 2: Function Expressions & Arrow Functions ===");
+
+      // Normal function declaration
+      function greet(name) {
+        return "Hello, " + name + "!";
+      }
+      console.log("Declaration:", greet("Deepanraj"));
+
+      // Function expression
+      const greetExpression = function(name) {
+        return "Hi, " + name + "!";
+      };
+      console.log("Expression:", greetExpression("Deepanraj"));
+
+      // Arrow function
+      const greetArrow = (name) => "Welcome, " + name + "!";
+      console.log("Arrow:", greetArrow("Deepanraj"));
+
+      // Arrow function with multiple lines
+      const square = (n) => {
+        let result = n * n;
+        return result;
+      };
+      console.log("square(5) =", square(5));
+    }
+  </script>
+</body>
+</html>

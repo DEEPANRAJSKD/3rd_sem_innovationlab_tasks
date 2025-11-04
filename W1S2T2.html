@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 1 - Session 2 | Task 2: Loop Control Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f5;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #1e7e34; }
+  </style>
+</head>
+<body>
+  <h2>Week 1 - Session 2: Task 2 (Loop Control)</h2>
+  <p>Click the button and check the console for outputs.</p>
+  <button onclick="runTask2()">Run Task 2</button>
+
+  <script>
+    function runTask2() {
+      console.clear();
+      console.log("=== Task 2: Loop Control Practice ===");
+
+      // while loop
+      console.log("\nWhile Loop (1 to 10):");
+      let i = 1;
+      while (i <= 10) {
+        console.log(i);
+        i++;
+      }
+
+      // do-while loop (simulated input)
+      console.log("\nDo-While Loop Simulation:");
+      let attempt = 0;
+      let correct = false;
+      do {
+        attempt++;
+        console.log("Attempt:", attempt);
+        if (attempt === 3) {
+          console.log("Correct input received!");
+          correct = true;
+        }
+      } while (!correct);
+
+      // for loop
+      console.log("\nFor Loop (Sum of first 5 numbers):");
+      let sum = 0;
+      for (let n = 1; n <= 5; n++) {
+        sum += n;
+      }
+      console.log("Sum =", sum);
+
+      // nested for loop
+      console.log("\nNested For Loop (Multiplication Table 1 to 3):");
+      for (let a = 1; a <= 3; a++) {
+        for (let b = 1; b <= 3; b++) {
+          console.log(`${a} x ${b} = ${a * b}`);
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2 - Session 2 | Task 3: Array Iteration & Loops</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #e64a19; }
+  </style>
+</head>
+<body>
+  <h2>Week 2 - Session 2: Task 3 (Array Iteration & Loops)</h2>
+  <p>Click the button and check the console for outputs.</p>
+  <button onclick="runTask3()">Run Task 3</button>
+
+  <script>
+    function runTask3() {
+      console.clear();
+      console.log("=== Task 3: Array Iteration and Loops ===");
+
+      let numbers = [1, 2, 3, 4, 5];
+      console.log("Array:", numbers);
+
+      // forEach() - print elements
+      console.log("\n--- forEach() ---");
+      numbers.forEach(num => console.log(num));
+
+      // map() - transform elements
+      console.log("\n--- map() (Square Numbers) ---");
+      let squares = numbers.map(num => num * num);
+      console.log("Squares:", squares);
+
+      // for-in loop - iterate over indexes
+      console.log("\n--- for-in (Indexes) ---");
+      for (let index in numbers) {
+        console.log(`Index: ${index}, Value: ${numbers[index]}`);
+      }
+
+      // for-of loop - iterate over values
+      console.log("\n--- for-of (Values) ---");
+      for (let value of numbers) {
+        console.log(value);
+      }
+
+      console.log("\n✅ Comparison:");
+      console.log("forEach/map: for arrays & transformations");
+      console.log("for-in: for indexes");
+      console.log("for-of: for values");
+    }
+  </script>
+</body>
+</html>

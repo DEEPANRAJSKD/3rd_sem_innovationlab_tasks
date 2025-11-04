@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 1 - Session 1 - Task 2</title>
+</head>
+<body>
+  <h2>Week 1 - Session 1 - Task 2</h2>
+  <p>Open the console to view the output.</p>
+
+  <script>
+
+    
+    let num = 42;                          // Number
+    let str = "Hello JavaScript";          // String
+    let bool = true;                       // Boolean
+    let nul = null;                        // Null
+    let undef;                             // Undefined (no value assigned)
+    let obj = { name: "Deepanraj", age: 21 };  // Object
+    let sym = Symbol("id");                // Symbol (unique value)
+
+    console.log("=== Different Data Types ===");
+    console.log("Number:", num);
+    console.log("String:", str);
+    console.log("Boolean:", bool);
+    console.log("Null:", nul);
+    console.log("Undefined:", undef);
+    console.log("Object:", obj);
+    console.log("Symbol:", sym);
+
+    // Type Conversion Examples
+    console.log("\n=== Explicit Conversion ===");
+    console.log(Number("10"));       // String → Number (works)
+    console.log(Number("10abc"));    // Invalid conversion → NaN
+    console.log(String(100));        // Number → String
+
+    console.log("\n=== Implicit Conversion ===");
+    console.log("'5' + 2 =", '5' + 2);            // String + Number → String ("52")
+    console.log("2 + '5' =", 2 + '5');            // Number + String → String ("25")
+    console.log("'Hello' + 5 =", 'Hello' + 5);    // String + Number → String ("Hello5")
+
+    console.log("1 + 2 + '3' =", 1 + 2 + '3');    // (1+2)=3 → "3" + "3" → "33"
+    console.log("'1' + 2 + 3 =", '1' + 2 + 3);    // "1" + 2 = "12", + 3 = "123"
+
+    console.log("\nProgram executed successfully!");
+  </script>
+</body>
+</html>

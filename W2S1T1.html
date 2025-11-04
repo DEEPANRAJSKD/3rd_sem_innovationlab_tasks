@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2 - Session 1 | Task 1: Defining and Calling Functions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #0056b3; }
+  </style>
+</head>
+<body>
+  <h2>Week 2 - Session 1: Task 1 (Defining and Calling Functions)</h2>
+  <p>Click the button and check the console for outputs.</p>
+  <button onclick="runTask1()">Run Task 1</button>
+
+  <script>
+    function runTask1() {
+      console.clear();
+      console.log("=== Task 1: Defining and Calling Functions ===");
+
+      // Simple function with fixed parameters
+      function add(a, b) {
+        return a + b;
+      }
+      console.log("add(5, 3) =", add(5, 3));
+
+      // Function using 'arguments' object
+      function sumAll() {
+        let total = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          total += arguments[i];
+        }
+        return total;
+      }
+      console.log("sumAll(1,2,3,4,5) =", sumAll(1, 2, 3, 4, 5));
+
+      // Function using rest operator (...)
+      function multiplyAll(...nums) {
+        return nums.reduce((product, n) => product * n, 1);
+      }
+      console.log("multiplyAll(2,3,4) =", multiplyAll(2, 3, 4));
+    }
+  </script>
+</body>
+</html>

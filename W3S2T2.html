@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3 - Session 2 | Task 2: Complex Data & Parameters</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef6f9;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #1e7e34; }
+  </style>
+</head>
+<body>
+  <h2>Week 3 - Session 2: Task 2 (Complex Data & Parameter Handling)</h2>
+  <p>Click the button and open console to see outputs.</p>
+  <button onclick="runTask2()">Run Task 2</button>
+
+  <script>
+    function runTask2() {
+      console.clear();
+      console.log("=== Task 2: Complex Data & Parameter Handling ===");
+
+      // Array of objects
+      const users = [
+        { name: "Aswin", age: 20 },
+        { name: "Deepan", age: 21 },
+        { name: "Riya", age: 19 }
+      ];
+
+      console.log("\nArray of Objects:");
+      users.forEach(user => console.log(`${user.name} - ${user.age}`));
+
+      // Access nested data
+      const products = [
+        { id: 1, info: { name: "Laptop", price: 50000 } },
+        { id: 2, info: { name: "Phone", price: 20000 } }
+      ];
+      console.log("\nAccess Nested Data:", products[0].info.name);
+
+      // Rest parameters
+      function sum(...numbers) {
+        return numbers.reduce((total, num) => total + num, 0);
+      }
+      console.log("\nRest Parameters (sum):", sum(10, 20, 30, 40));
+
+      // Spread operator
+      const arr1 = [1, 2, 3];
+      const arr2 = [4, 5, 6];
+      const combined = [...arr1, ...arr2];
+      console.log("\nSpread Operator (combine arrays):", combined);
+
+      const obj1 = { a: 1, b: 2 };
+      const obj2 = { c: 3, d: 4 };
+      const mergedObj = { ...obj1, ...obj2 };
+      console.log("Spread Operator (merge objects):", mergedObj);
+
+      // Parameter destructuring
+      function showUser({ name, age }) {
+        console.log(`\nUser Info -> Name: ${name}, Age: ${age}`);
+      }
+      showUser(users[1]);
+    }
+  </script>
+</body>
+</html>

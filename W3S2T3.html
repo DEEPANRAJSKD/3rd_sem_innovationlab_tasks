@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3 - Session 2 | Task 3: Function Context & Advanced Calls</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fef6e4;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #e68900; }
+  </style>
+</head>
+<body>
+  <h2>Week 3 - Session 2: Task 3 (Function Context & Advanced Calls)</h2>
+  <p>Click below and open the console to see how call(), apply(), and bind() work.</p>
+  <button onclick="runTask3()">Run Task 3</button>
+
+  <script>
+    function runTask3() {
+      console.clear();
+      console.log("=== Task 3: Function Context & Advanced Calls ===");
+
+      const person1 = { name: "Aswin" };
+      const person2 = { name: "Deepan" };
+
+      function greet(greeting, place) {
+        console.log(`${greeting}, I am ${this.name} from ${place}.`);
+      }
+
+      // call()
+      console.log("\nUsing call():");
+      greet.call(person1, "Hello", "Chennai");
+
+      // apply()
+      console.log("\nUsing apply():");
+      greet.apply(person2, ["Hi", "Madurai"]);
+
+      // bind()
+      console.log("\nUsing bind():");
+      const boundGreet = greet.bind(person1, "Hey", "Coimbatore");
+      boundGreet();
+
+      // Difference example
+      console.log("\nDifference Summary:");
+      console.log("call(): invokes immediately with comma-separated args");
+      console.log("apply(): invokes immediately with args in an array");
+      console.log("bind(): returns a new function to be called later");
+    }
+  </script>
+</body>
+</html>

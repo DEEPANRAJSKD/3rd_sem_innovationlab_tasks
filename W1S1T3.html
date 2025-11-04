@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 1 - Session 1 - Task 3</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f5;
+      text-align: center;
+      margin-top: 80px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>Week 1 - Session 1 - Task 3</h2>
+  <p>Click the button and check your browser console for output.</p>
+  <button onclick="runProgram()">Run Program</button>
+
+  <script>
+    //// week 1 - session 1 - task 3
+
+    function runProgram() {
+      console.clear();
+
+      //1
+      // Arithmetic Operators
+      let a = 10, b = 3;
+      console.log("=== Arithmetic Operators ===");
+      console.log(a + b);
+      console.log(a - b);
+      console.log(a * b);
+      console.log(a / b);
+      console.log(a % b);
+
+      //2
+      // Assignment Operators
+      let x = 5;
+      console.log("\n=== Assignment Operators ===");
+      x += 3;
+      console.log(x);
+      x -= 2;
+      console.log(x);
+
+      //3
+      // Relational Operators
+      let p = 10, q = "10";
+      console.log("\n=== Relational Operators ===");
+      console.log(p == q);
+      console.log(p === q);
+      console.log(p != q);
+      console.log(p !== q);
+      console.log(p > 5);
+      console.log(p < 5);
+      console.log(p >= 10);
+      console.log(p <= 5);
+
+      //4
+      // Logical Operators
+      let c1 = true, c2 = false;
+      console.log("\n=== Logical Operators ===");
+      console.log(c1 && c2);
+      console.log(c1 || c2);
+      console.log(!c1);
+
+      //5
+      // Conditional (Ternary) Operator
+      let age = 18;
+      let result = (age >= 18) ? "Eligible" : "Not Eligible";
+      console.log("\n=== Ternary Operator ===");
+      console.log(result);
+
+      //6
+      // Bitwise Operators
+      let m = 5, n = 3;
+      console.log("\n=== Bitwise Operators ===");
+      console.log(m & n);
+      console.log(m | n);
+      console.log(m ^ n);
+      console.log(~m);
+      console.log(m << 1);
+      console.log(m >> 1);
+
+      //7
+      // Increment and Decrement
+      let num = 10;
+      console.log("\n=== Increment / Decrement ===");
+      console.log(num++);
+      console.log(num);
+      console.log(++num);
+      console.log(num--);
+      console.log(num);
+      console.log(--num);
+
+      console.log("\nProgram executed successfully!");
+    }
+  </script>
+</body>
+</html>

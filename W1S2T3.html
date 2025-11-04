@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 1 - Session 2 | Task 3: Break and Continue</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      text-align: center;
+      margin-top: 60px;
+    }
+    button {
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #e64a19; }
+  </style>
+</head>
+<body>
+  <h2>Week 1 - Session 2: Task 3 (Break & Continue)</h2>
+  <p>Click the button and check the console for outputs.</p>
+  <button onclick="runTask3()">Run Task 3</button>
+
+  <script>
+    function runTask3() {
+      console.clear();
+      console.log("=== Task 3: Break and Continue ===");
+
+      // Break example - find first prime number between 2 and 10
+      console.log("\nBreak Example: Find first prime number between 2 and 10");
+      for (let n = 2; n <= 10; n++) {
+        let isPrime = true;
+        for (let d = 2; d < n; d++) {
+          if (n % d === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        if (isPrime) {
+          console.log("First prime found:", n);
+          break;
+        }
+      }
+
+      // Continue example - print only odd numbers between 1 and 20
+      console.log("\nContinue Example: Print only odd numbers between 1 and 20");
+      for (let i = 1; i <= 20; i++) {
+        if (i % 2 === 0) continue;
+        console.log(i);
+      }
+    }
+  </script>
+</body>
+</html>
